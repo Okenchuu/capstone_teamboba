@@ -89071,6 +89071,25 @@ var data = [
     }
 ];
 
+function distance(lat1, lon1, lat2, lon2) {
+  if ((lat1 == lat2) && (lon1 == lon2)) {
+      return 0;
+  } else {
+      var radlat1 = Math.PI * lat1 / 180;
+      var radlat2 = Math.PI * lat2 / 180;
+      var theta = lon1 - lon2;
+      var radtheta = Math.PI * theta / 180;
+      var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+      if (dist > 1) {
+          dist = 1
+      }
+      dist = Math.acos(dist);
+      dist = dist * 180 / Math.PI;
+      dist = dist * 60 * 1.1515;
+      return dist
+  }
+}
+
 function compare( a, b ) {
     if ( a.distance < b.distance ){
       return -1;
@@ -89093,10 +89112,10 @@ function getLocation() {
 
 const ls = [];
 function showPosition(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-    //var latitude = 47.6211;
-    //var longitude = -122.3244;
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    //const latitude = 47.6211;
+    //const longitude = -122.3244;
     for (var i = 0; i < data.length; i++) {
         var tempData = data[i];
         var otherLat = tempData['lat'];
@@ -89138,7 +89157,8 @@ function showPosition(position) {
                     var lon = d.coord.lon;
                     var city = d.name;
                     var url = "";
-                    var distance = distCalc(d.coord.lat, d.coord.lon, lat, lon);
+                    console.log(latitude, longitude);
+                    var distance = distCalc(latitude, longitude, lat, lon);
                     var html = "";
                     var count = 0;
                     for (var k = 0; k < data.length; k++) {
