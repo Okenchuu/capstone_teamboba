@@ -2,33 +2,36 @@ import { useState } from 'react';
 import axios from 'axios';
 
 const LoginForm = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    // const [username, setUsername] = useState('');
+    // const [password, setPassword] = useState('');
+    // const [error, setError] = useState('');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        const authObject = { 'Project-ID': "c9518d9a-b207-40a5-9f1e-c17c3e7856ae", 'User-Name': username, 'User-Secret': password }
+    //     const authObject = { 'Project-ID': "c9518d9a-b207-40a5-9f1e-c17c3e7856ae", 'User-Name': username, 'User-Secret': password }
 
-        try {
-            await axios.get('https://api.chatengine.io/chats', { headers: authObject });       
+    //     try {
+    //         await axios.get('https://api.chatengine.io/chats', { headers: authObject });       
 
-            localStorage.setItem('username', username);
-            localStorage.setItem('password', password);
+    //         localStorage.setItem('username', username);
+    //         localStorage.setItem('password', password);
 
-            window.location.reload();
-        } catch (error) {
-            setError('Incorrect username or password. Please try again.');
-        }
+    //         window.location.reload();
+    //     } catch (error) {
+    //         setError('Incorrect username or password. Please try again.');
+    //     }
 
-    }
+    // }
     
     return (
         <div className="wrapper">
             <div className="form"> 
-                <h1 className="title">SAD Chat</h1>
-                <form onSubmit={handleSubmit}>
+                <h1 className="title" style={{fontWeight: "800", fontSize: "7rem"}}>SAD Chat</h1>
+                <div align="center">
+                    <h1 className="title">Log in to start chatting</h1>
+                </div>
+                {/* <form onSubmit={handleSubmit}>
                     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required />
                     <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" required />
                     <div align="center">
@@ -37,7 +40,7 @@ const LoginForm = () => {
                         </button>
                     </div>
                     <h2 className="error">{error}</h2>
-                </form>
+                </form> */}
             </div>
         </div>
     )

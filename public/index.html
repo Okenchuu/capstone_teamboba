@@ -62,4 +62,99 @@
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
   </body>
+  <script>
+
+
+    localStorage.setItem('userFound', 'false');
+    
+    //Finds if user exists 
+    let myHeaders = new Headers();
+      myHeaders.append("PRIVATE-KEY", "eb99ba58-1138-4847-9b19-9ad7cbe7e81c");
+
+    let requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+
+    function findUser(user) {
+      fetch("https://api.chatengine.io/users/", requestOptions)
+        .then(response => response.json())
+        .then(result => obj = result)
+        .then(function(data) {
+          data.forEach(function(element) {
+            //console.log(element);
+            //console.log("Username: " + element['username']);
+            if(element['username'] === user) {
+              localStorage.setItem('userFound', 'true');
+              //console.log("user was found");
+            }
+          });
+      })
+      .catch(error => console.log('error', error));
+    }
+
+    findUser(localStorage.getItem('username'));
+
+    function createUser(user) {
+          //console.log("sadly, the user was not found ");
+
+          let myHeaders = new Headers();
+          myHeaders.append("Private-Key", "eb99ba58-1138-4847-9b19-9ad7cbe7e81c");
+          myHeaders.append("Content-Type", "application/json");
+
+          let raw = '{\n    \"username\": \"' + localStorage.getItem('username') + '\",\n    \"secret\": \"999\"\n}';
+
+          let requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+          };
+
+          fetch("https://api.chatengine.io/users/", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+          
+          //location.reload();
+    }
+
+
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile()
+        //console.log('User is ' + JSON.stringify(profile))
+
+        var element = document.querySelector('#userInfo')
+        element.innerHTML = '<div>Hi, ' + profile.getGivenName() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="signOut()">Sign Out</button></div>'
+
+        localStorage.setItem('username', profile.getEmail());
+        localStorage.setItem('password', '999');
+
+        //If the user is not found, create a new user
+        if(localStorage.getItem('userFound') === 'false') { 
+          setTimeout(createUser(localStorage.getItem('username'), 500));
+          location.reload();
+          
+        }
+      
+
+        //refreshes browser after user signs in
+        if(localStorage.getItem('needReload') === 'true') {
+         setTimeout(localStorage.setItem('needReload', 'false'), 2000);
+         location.reload();
+        }
+
+    }
+
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut();
+        localStorage.setItem('username', '');
+        localStorage.setItem('password', '');
+        localStorage.setItem('needReload', 'true');
+        location.reload();
+    }
+    
+  </script>
 </html>
