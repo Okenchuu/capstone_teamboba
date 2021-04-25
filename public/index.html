@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta name="theme-color" content="#000000" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -64,8 +68,7 @@
   </body>
   <script>
 
-
-    localStorage.setItem('userFound', 'false');
+    //localStorage.setItem('userFound', 'false');
     
     //Finds if user exists 
     let myHeaders = new Headers();
@@ -83,21 +86,20 @@
         .then(result => obj = result)
         .then(function(data) {
           data.forEach(function(element) {
-            //console.log(element);
-            //console.log("Username: " + element['username']);
+            console.log(element);
+            console.log("Username: " + element['username']);
             if(element['username'] === user) {
               localStorage.setItem('userFound', 'true');
-              //console.log("user was found");
+              console.log("user was found");
             }
           });
+          //location.reload();
       })
       .catch(error => console.log('error', error));
     }
 
-    findUser(localStorage.getItem('username'));
-
     function createUser(user) {
-          //console.log("sadly, the user was not found ");
+          console.log("creating user ");
 
           let myHeaders = new Headers();
           myHeaders.append("Private-Key", "eb99ba58-1138-4847-9b19-9ad7cbe7e81c");
@@ -120,10 +122,16 @@
           //location.reload();
     }
 
+    function sleep(delay) {
+          var start = new Date().getTime();
+          while (new Date().getTime() < start + delay);
+    }
 
+    //actions to take on sign
     function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile()
         //console.log('User is ' + JSON.stringify(profile))
+        console.log("User has signed in");
 
         var element = document.querySelector('#userInfo')
         element.innerHTML = '<div>Hi, ' + profile.getGivenName() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="signOut()">Sign Out</button></div>'
@@ -131,19 +139,38 @@
         localStorage.setItem('username', profile.getEmail());
         localStorage.setItem('password', '999');
 
-        //If the user is not found, create a new user
-        if(localStorage.getItem('userFound') === 'false') { 
-          setTimeout(createUser(localStorage.getItem('username'), 500));
-          location.reload();
-          
-        }
-      
+        $.ajax({
+          url:findUser(localStorage.getItem('username')),
+          success:function(){
+            if(localStorage.getItem('userFound') !== 'true') { 
+              createUser(localStorage.getItem('username'));
+              localStorage.setItem('userFound', 'true');
+              console.log("new user was created");
+
+              sleep(1000);
+              location.reload();
+            }
+          }
+        })
+
+        //findUser(localStorage.getItem('username'));
 
         //refreshes browser after user signs in
         if(localStorage.getItem('needReload') === 'true') {
-         setTimeout(localStorage.setItem('needReload', 'false'), 2000);
-         location.reload();
+          //sleep(3000);
+          localStorage.setItem('needReload', 'false');
+          location.reload();
         }
+
+        //If the user is not found, create a new user
+        // if(localStorage.getItem('userFound') === 'false') { 
+        //   createUser(localStorage.getItem('username'));
+        //   console.log("new user was created");
+        //   //localStorage.setItem('userFound', 'true'); 
+        //   location.reload();
+        // }
+
+        //location.reload();
 
     }
 
