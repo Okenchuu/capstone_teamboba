@@ -80,10 +80,6 @@ firebase.analytics();
 
             var element = document.querySelector('#userInfo')
             element.innerHTML = '<div>Hi, ' + profile.getGivenName() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="signOut()">Sign Out</button></div>'
-
-            /*var image = document.createElement('img')
-            image.setAttribute('src', profile.getImageUrl())
-            element.append(image)*/
         }
 
         function signOut() {
@@ -91,16 +87,6 @@ firebase.analytics();
             auth2.signOut();
             location.reload();
         }
-        /*if (auth2.isSignedIn.get()) {
-            var profile = auth2.currentUser.get().getBasicProfile();
-            console.log('ID: ' + profile.getId());
-            console.log('Full Name: ' + profile.getName());
-            console.log('Given Name: ' + profile.getGivenName());
-            console.log('Family Name: ' + profile.getFamilyName());
-            console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail());
-        }*/
-    
         
     </script>
     <script type="text/javascript" src="./cityUrl.json"></script>

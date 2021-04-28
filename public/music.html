@@ -25,7 +25,7 @@
     <div class="hero-image" id='musicbg'>
         <div class="hero-text">
             <h1 style="margin-top: 35%">Music Therapy</h1>
-            <h2 id="">Find the one that helps you heal!</h2>
+            <h2 id="">Find music that helps soothe the soul!</h2>
         </div>
     </div>
     <header id="header" class="alt">
@@ -47,9 +47,9 @@
                 <div>
                     <p class="musictype">Isochronic Tones</p> 
                     <div class='musicdeswid'>
-                    <p class="musicdes">This playlist includes a Brainwave entrainment session that helps to elevate your brainwave activity.
-                         What it utilizes is a special beat called isochronic tone, which could produce an evoked potential and drive your brainwave
-                          activity to a more desired mental state. Possible benefits: improve focus, relaxation, energy levels, sleep and more!
+                    <p class="musicdes">This playlist includes a Brainwave entertainment session that helps to elevate your brainwave activity.
+                         It utilizes a special beat called isochronic tone, which could produce an evoked potential and drive your brainwave
+                          activity to a more desired mental state. Possible benefits: improved focus, relaxation, higher energy levels, better sleep and more!
                     </p></div>
                     <iframe width="45%" height="45%" src="https://www.youtube.com/embed/?listType=playlist&list=RDuVbEhrGlv6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
@@ -58,7 +58,7 @@
                 <div> 
                     <p class="musictype">Yoga Music Relaxing 101</p> 
                     <div class='musicdeswid'>
-                        <p class="musicdes">Many forms of mindfulness and yoga are great practices that are both personally enjoyable and anti SAD mood tools.
+                        <p class="musicdes">Many forms of mindfulness and yoga are great practices that are both personally enjoyable and anti-SAD mood tools.
                             They are helpful in resetting your nervous system and release tension by increasing serotonin levels. Try integrating these poses
                             into your routine along with this playlist if you're suffering from the winter blues. </p>
                     </div>
@@ -68,14 +68,14 @@
             <div style="background-color:rgb(219, 176, 223) ;">   
                 <div>
                     <p class="musictype">Good Vibes! Mood Booster</p> <div class='musicdeswid'>
-                    <p class="musicdes">Listening to some upbeat music here to boost your overall happiness! If you are looking for positive energy and enjoy happy indie, this is definitely the one for you.</p></div>
+                    <p class="musicdes">Listen to some upbeat music here to boost your overall happiness! If you are looking for positive energy and enjoy happy indie, this is definitely the playlist for you.</p></div>
                     <iframe width="45%" height="45%" src="https://www.youtube.com/embed/?listType=playlist&list=RDMWKki0K5yCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div style="background-color:rgb(242, 246, 250);">
                 <div>
                     <p class="musictype">Healing Binural Beats</p> <div class='musicdeswid'>
-                    <p class="musicdes">An awesome playlist by Greenred Productions meditation music that constits a variety of music choices to combat depressive moods: Binaural Beats Music, Focus Music, Healing Music and so on. Try it out here!</p></div> 
+                    <p class="musicdes">An awesome playlist by Greenred Productions meditation music that consists of a variety of music choices to combat depressive moods: Binaural Beats Music, Focus Music, Healing Music and so on. Give them a listen here!</p></div> 
                     <iframe width="45%" height="45%" src="https://www.youtube.com/embed/?listType=playlist&list=RD3pNpHZ1yv3I&index=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
@@ -113,10 +113,6 @@ firebase.analytics();
 
             var element = document.querySelector('#userInfo')
             element.innerHTML = '<div>Hi, ' + profile.getGivenName() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="signOut()">Sign Out</button></div>'
-
-            /*var image = document.createElement('img')
-            image.setAttribute('src', profile.getImageUrl())
-            element.append(image)*/
         }
 
         function signOut() {
@@ -124,16 +120,6 @@ firebase.analytics();
             auth2.signOut();
             location.reload();
         }
-        /*if (auth2.isSignedIn.get()) {
-            var profile = auth2.currentUser.get().getBasicProfile();
-            console.log('ID: ' + profile.getId());
-            console.log('Full Name: ' + profile.getName());
-            console.log('Given Name: ' + profile.getGivenName());
-            console.log('Family Name: ' + profile.getFamilyName());
-            console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail());
-        }*/
-    
         
     </script>
     <script src ="app.js"></script>
