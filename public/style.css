@@ -57,6 +57,21 @@
     position: relative;
     /*box-shadow:-10px 0px 25px #404040;*/
 }
+#aboutbg {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    /*linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),*/
+    background-image: url('img/sunshine.jpg');
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /*box-shadow:-10px 0px 25px #404040;*/
+}
 
 #musicmain div {
     height: 100vh;
@@ -294,4 +309,48 @@
     position: relative;
     width: 13.875rem;
 }
+
+
+
+.ourAppH2 {
+    text-align: right;
+    margin:auto;
+    background-color: #59564e;
+    color: #fff;
+    padding: 18px;
+    font-size: 10px;
+    letter-spacing: 7px;
+    width: 25%;
+
+}
+
+#bottom{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/sunshine.jpg');
+    opacity: 0.95;
+    
+    height: 200px;
+    margin-top:50px;
+    padding:2%;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bottom p{
+    color:rgba(255, 255, 255, 0.85);
+}
+
+
+
+h2{
+    text-align:center;
+}
+
+#bottomp{
+    margin-bottom:0;
+    padding-top:50px;
+    height:250px;
+}
+
 
