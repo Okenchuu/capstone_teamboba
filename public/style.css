@@ -125,7 +125,7 @@
 #travelbg {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     /*linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),*/
-    background-image: url('img/sunshine.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)), url('img/travel.jpg');
 
     /* Set a specific height */
     height: 100%;
