@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Zachacry Hao Tan, Michelle Gouw, Nina Zhang, Zhan Wu">
+    <title>INFO 490 Capstone Project Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="491551402498-2u9qlqk0mgmvmr1cciac09tq3jlrgtrn.apps.googleusercontent.com">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body id="homebody"> 
+    <div class="hero-image" id='aboutbg'>
+        <div class="hero-text">
+            <h1 style="margin-top: 35%">About Us</h1>
+        </div>
+    </div>
+    <header id="header" class="alt">
+        <h1 id="logo"><img class='logoPic' src="img/logo2.png" alt="website logo"></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="landing.html">Weather</a></li>
+                <li><a href="index.html">Chat</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li class="current"><a href="aboutus.html">About Us</a></li>
+                <li><div id="userInfo"><div class="g-signin2" data-onsuccess="onSignIn"></div></div></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section className="ourApp">
+            <div className="parallax">
+                <h2 className="ourAppH2"style="margin-top: 5%;">Overview</h2>
+                <div className="aboutcontent" style="margin-left: 10%;margin-right:10%;margin-bottom:50px;margin-top:20px;">
+                    <p>
+                        Since 2020, the Covid-19 pandemic has been devastating and has brought unmeasurable global pain. Besides the physical symptoms, health issues,
+                        and financial burdens it has caused, mental stress is also a large problem because people need to follow social distancing guidelines and live under lockdown restrictions.
+                        Those who have Seasonal Affective Disorder (SAD) has been one of the hardest hit groups by the pandemic.
+                    <br></br>
+                        Today, Seasonal Affective Disorder affects more than 15 million people in the U.S., with women four times more likely to be diagnosed with it than men. 
+                        Under the condition of lockdowns and social distancing, people are more likely to get less exposure to sunglight and have reduced hours of social interaction. 
+                        These issues of a lack of spontaneity and random events, limited social interaction, and reduced sunlight exposure are leading factors that could exacerbate SAD or 
+                        cause SAD in persons previously unaffected. Furthermore, many individuals minimize their symptoms because they experience guilt and shame surrounding their SAD and admitting that the weather affects 
+                        their mood (Lindberg, 2020), which could worsen their conditions. Therefore, we see a problem that needs better solutions, and 
+                        come to our problem statement: <b>How might people in inclement weather areas with SAD achieve a stronger sense of connectedness and better self-care techniques so that they 
+                        can improve their mood?</b>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section className="ourApp">
+            <div className="parallax">
+                <h2 className="ourAppH2" style="margin-top: 5%;">Target Stakeholders and Users</h2>
+            </div>
+            <p style="margin-left: 10%;margin-right:10%;margin-bottom:50px;margin-top:20px;"> 
+                This webapp is designed to help people who suffer from SAD, no matter if they are formally diagnosed or just experiencing related symptoms and stress. In addition, 
+                people who do not have SAD are also welcome to use this web app to alleviate their mood and foster connectedness. This app may not be suitable for users with severe
+                symptoms who need professional and immediate help.
+            </p>
+
+            <div className="parallax">
+                <h2 className="ourAppH2" style="margin-top: 5%;">Key Features & Benefits</h2>
+            </div>
+            <p style="margin-left: 10%;margin-right:10%;margin-bottom:20px;margin-top:20px;"> 
+                Our designed solution is a functioning webapp that merges basic chat and recommendation features into a platform to make sufferers feel less alone. Besides
+                the basic weather forecast feature, this webapp has three key feature pages:</p>
+                <ul style="margin-left: 10%;margin-right:10%;margin-bottom:50px;">
+                    <li><b>Travel Recommendation</b></li>
+                    <dd>- Through recommendation algorithms, it displays to users sunnier locations to increase their light exposure & outdoor activities.</dd>
+                    <li><b>Music Therapies</b></li>
+                    <dd>- Many forms of music are both personally enjoyable and great anti-SAD mood tools. They are helpful in resetting people's nervous system and release tension. 
+                        For this reason, we have included a series of music playlists like Binaural Beats Music, Focus Music, Healing Music and more. 
+                    </dd>
+                    <li><b>Chat Rooms</b></li>
+                    <dd>- Chat rooms include one-on-one chat and peer-support group chat. By giving users a chance talking to similar people, we aim to facilitate 
+                        connectedness, build up networks of self-help, and overall give the SAD group better coping strategies and support.
+                    </dd>
+                </ul>
+                <p style="margin-left: 10%;margin-right:10%;margin-bottom:50px;margin-top:20px;">
+                Overall, we aim to help people understand SAD and help sufferers feel validated, help sufferers feel less alone, and boost their mood. 
+                Out of all the apps that aim to tackle mental health problems, few are designed specifically for those who suffer from SAD. Furthermore, 
+                compared to pervasive weather apps on the market, our site is trying to demonstrate forecast information with more empathy using pleasing images and UI. 
+            </p>
+
+            <div className="parallax">
+                <h2 className="ourAppH2" style="margin-top: 5%;">Presentation Video</h2>
+            </div>
+
+            <div className="parallax">
+                <h2 className="ourAppH2" style="margin-top: 5%;">Project Status</h2>
+            </div>
+            <p style="margin-left: 10%;margin-right:10%;margin-bottom:50px;margin-top:20px;"> 
+                This webapp is a designed product by Team Boba in University of Washington Information School Capstone project for Winter/Spring 2021.
+                As of now, we have chosen to keep our app <b>open source</b> so that other developers in the mental health space can view and use our code in their own projects.
+                There is not much in the way of apps for those suffering from seasonal affective disorder and we created Better Weather, first and foremost, to help people. For 
+                detailed handoff documentation and more info, please visit our <a href="https://github.com/Okenchuu/capstone_teamboba">Github Page</a>. 
+            </p>
+
+        </section>
+    </main>
+    <div className="parallax" id="bottom">
+        <footer className="index-footer" id="contact">
+            <p>This page is the landing page for Team Boba's Capstone project</p>
+            <p>Our team members: Michelle Gouw, Nina Zhang, Zachary Tan, Zhan Wu (ordered alphabetically)</p>
+            <address><p>
+                Contact us at <a href="mailto:gouwm@uw.edu">gouwm@uw.edu </a>, <a href="mailto:xz67@uw.edu">xz67@uw.edu </a>, 
+                <a href="mailto:zht@uw.edu">zht@uw.edu </a>,<a href="mailto:alex.zhan.wu@icloud.com">alex.zhan.wu@icloud.com </a>
+            </p></address>
+            <p>&copy; 2021 Michelle Gouw, Nina Zhang, Zachary Tan, and Zhan Wu.</p>
+        </footer>
+    </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+<script>
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+    apiKey: "AIzaSyB0Hes4pNgunsP5hpv_HxPzgMsc4c7dE48",
+    authDomain: "capstone-teamboba.firebaseapp.com",
+    projectId: "capstone-teamboba",
+    storageBucket: "capstone-teamboba.appspot.com",
+    messagingSenderId: "491551402498",
+    appId: "1:491551402498:web:0f9dcdbc83ffc6df6c151b",
+    measurementId: "G-K24LF68B0Z"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+</script>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile()
+            console.log('User is ' + JSON.stringify(profile))
+
+            var element = document.querySelector('#userInfo')
+            element.innerHTML = '<div>Hi, ' + profile.getGivenName() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="signOut()">Sign Out</button></div>'
+        }
+
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut();
+            location.reload();
+        }
+
+    </script>
+    <script src ="app.js"></script>
+</html>
