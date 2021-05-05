@@ -15,5 +15,5 @@ As a default, Google OAuth access tokens expire after an hour so users will only
 On the closure date, information stored on Chat Engine’s website including user accounts, the project (chatroom), and cloud account as a whole will be deleted and all APIs used will be disabled. Of course, users can email any of the team members if they would like their accounts to be deleted in the meantime.
 
 ## Converting the Code Repository to a Public Repository
-The code for Better Weather is currently on Okenchuu’s(link) public Github repository and will remain accessible to the public. 
+The code for Better Weather is currently on Okenchuu’s public <a href='https://github.com/Okenchuu/capstone_teamboba'>Github repository</a> and will remain accessible to the public. 
 
