@@ -89091,10 +89091,10 @@ function distance(lat1, lon1, lat2, lon2) {
 }
 
 function compare( a, b ) {
-    if ( a.distance < b.distance ){
+    if ( a.distToLoc < b.distToLoc ){
       return -1;
     }
-    if ( a.distance > b.distance ){
+    if ( a.distToLoc > b.distToLoc ){
       return 1;
     }
     return 0;
@@ -89109,22 +89109,36 @@ function getLocation() {
 }
 
 
-
-const ls = [];
 function showPosition(position) {
-    //const latitude = position.coords.latitude;
-    //const longitude = position.coords.longitude;
-    const latitude = 47.6211;
-    const longitude = -122.3244;
+    Number.prototype.countDecimals = function () {
+      if(Math.floor(this.valueOf()) === this.valueOf()) return 0;
+      return this.toString().split(".")[1].length || 0; 
+    }
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    //const latitude = 47.6211;
+    //const longitude = -122.3244;
+    data.forEach(function (elem) {
+      if (elem.url == "") {
+        elem.url = "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png";
+      }
+      elem.distToLoc = distance(latitude, longitude, elem.lat, elem.lng);
+    });
+    data.sort(compare);
     for (var i = 0; i < data.length; i++) {
         var tempData = data[i];
         var otherLat = tempData['lat'];
         var otherLng = tempData['lng'];
+        if (otherLat.countDecimals() > 4) {
+          otherLat = Math.round(otherLat * 10000) / 10000;
+        }
+        if (otherLng.countDecimals() > 4) {
+          otherLng = Math.round(otherLng * 10000) / 10000;
+        }
         var dist = distance(latitude, longitude, otherLat, otherLng);
         if (dist < 50) {
             const key = "e14f5933d267004c2d3a342dba46828d";
             const weather = "https://api.openweathermap.org/data/2.5/weather?lat=" + otherLat + "&lon=" + otherLng + "&units=metric&appid=" + key;
-              
             fetch(weather)
                 .then(response => response.json())
                 .then(d => {
@@ -89146,7 +89160,6 @@ function showPosition(position) {
                             return dist
                         }
                     }
-                    var temp = d.main.temp;
                     var description = d.weather[0].description;
                     description = description.split(" ");
                     for (let z = 0; z < description.length; z++) {
@@ -89157,14 +89170,23 @@ function showPosition(position) {
                     var lon = d.coord.lon;
                     var city = d.name;
                     var url = "";
-                    console.log(latitude, longitude);
                     var distance = distCalc(latitude, longitude, lat, lon);
                     var html = "";
                     var count = 0;
                     for (var k = 0; k < data.length; k++) {
-                        if (data[k]['lat'] == lat && data[k]['lng'] == lon) {
+                        var tempLat = data[k]['lat'];
+                        var tempLon = data[k]['lng'];
+                        if (tempLat.countDecimals() > 4) {
+                          tempLat = Math.round(tempLat * 10000) / 10000;
+                        }
+                        if (tempLon.countDecimals() > 0) {
+                          tempLon = Math.round(tempLon * 10000) / 10000;
+                        }
+                        if (tempLat == lat && tempLon == lon) {
+                            city = data[k]['city_ascii'];
                             url = data[k]['url'];
                             count = k;
+                            
                         }
                     }
                     if (description.toUpperCase().includes("CLEAR") || description.toUpperCase().includes("SUN")) {
@@ -89172,7 +89194,7 @@ function showPosition(position) {
                         var idCurrent = "bg" + count;
                         html += "<div class='col-sm-12 col-md-6 col-lg-4' style='margin-top:45px'><div class='card mb-4 box-shadow' id='" + idCurrent + "' style='color:black; height:200px'><div class='card-body'><h2 class = 'card-title'>" + city + "</h2><p class='card-text'>" + description + "</p><p class='card-text'>" + Math.round(distance * 100) / 100 + " miles</p></div></div></div>";
                         document.getElementById("travelList").innerHTML = html;
-                        document.getElementById(idCurrent).style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url('" + url + "')";                        
+                        document.getElementById(idCurrent).style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url('" + url + "')";                        
 
                     }
                 })
