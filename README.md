@@ -1,11 +1,14 @@
-# Capstone490_TeamBoba
+# Better Weather
 Welcome to our INFO490 Capstone, Team Boba's working repository! <br/>
-For this project, our targeted final product is a functioning web that is adaptable to mobile devices and merges basic social media features into weather forecasts. Through recommendation algorithms, it feeds users with sunnier locations and cheerful music as a SAD mind-body therapy. It also aims to facilitate connectedness and overall give the SAD group coping strategies and support for brighter attitudes.<br/>
+
+## Project Info
+Today, Seasonal Affective Disorder affects more than 15 million people in the U.S., with women four times more likely to be diagnosed with it than men. At the same time, the current pandemic makes more people live under limited social interaction and reduced sunlight exposure, which are leading factors that could cause/exacerbate SAD. <br/>
+This designed solution, Better Weather, is a website that merges basic chat and recommendation features in order to give supports and help sufferers combat SAD. Through its different feature pages, users have the chance to foster connectedness& peer support, stress relief, increase possible light exposure, and ultimately improve their mood.<br/>
 <a href='https://okenchuu.github.io/capstone_teamboba/landing.html'>Link to webpage</a>
 
 ## Team Members
 <span style="font-size:17px;">**Nina Zhang**</span><br> 
-Role: PM<br>
+Role: PM, Frontend<br>
 Email: xz67@uw.edu
 
 <span style="font-size:17px;">**Zhan Wu**</span><br> 
