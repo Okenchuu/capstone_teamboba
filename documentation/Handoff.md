@@ -8,7 +8,7 @@ As of now, there are no plans to take down Better Weather and the code is availa
 A notice will also be posted on our website’s landing page three months before it is set to close detailing the reason for closure and closure date.
 
 ## System Shutdown and Data Deletion
-Better Weather uses <a href='https://developers.google.com/identity/protocols/oauth2'>Google OAuth</a> for user authentication, <a href='https://chatengine.io/'>Chat Engine</a> to host the chatrooms, and <a href='https://openweathermap.org/api'>OpenWeatherMap</a> ’s APIto retrieve the user’s location to display the weather and travel recommendations. <br>
+Better Weather uses <a href='https://developers.google.com/identity/protocols/oauth2'>Google OAuth</a> for user authentication, <a href='https://chatengine.io/'>Chat Engine</a> to host the chatrooms, and <a href='https://openweathermap.org/api'>OpenWeatherMap</a> ’s API to retrieve the user’s location to display the weather and travel recommendations. <br>
 
 As a default, Google OAuth access tokens expire after an hour so users will only stay logged in for the duration of the access token lifetime. We do not collect data tied to a user’s Google account and merely use their emails to log them into the chat server built with Chat Engine. Emails are stored in Better Weather’s project account on chatengine.io. We also do not collect or store users’ location data. <br>
 
