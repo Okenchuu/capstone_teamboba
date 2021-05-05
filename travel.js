@@ -89112,10 +89112,10 @@ function getLocation() {
 
 const ls = [];
 function showPosition(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    //const latitude = 47.6211;
-    //const longitude = -122.3244;
+    //const latitude = position.coords.latitude;
+    //const longitude = position.coords.longitude;
+    const latitude = 47.6211;
+    const longitude = -122.3244;
     for (var i = 0; i < data.length; i++) {
         var tempData = data[i];
         var otherLat = tempData['lat'];
