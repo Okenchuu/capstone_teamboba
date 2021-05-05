@@ -7,7 +7,7 @@ This designed solution, Better Weather, is a website that merges basic chat and 
 <a href='https://okenchuu.github.io/capstone_teamboba/landing.html'>Link to webpage</a>
 
 ## Team Members
-<span style="font-size:17px;">**Nina Zhang**</span><br> 
+<span style="font-size:17px;">**Nina(Xiying) Zhang**</span><br> 
 Role: PM, Frontend<br>
 Email: xz67@uw.edu
 
