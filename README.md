@@ -25,3 +25,6 @@ Email: gouwm@uw.edu
 
 ## Handoff Documentation
 <a href='https://github.com/Okenchuu/capstone_teamboba/blob/main/documentation/Handoff.md'>See Here</a>
+
+## License
+This project is licensed under the MIT License - see the <a href='https://github.com/Okenchuu/capstone_teamboba/blob/main/LICENSE.md'>LICENSE.md</a> for details
