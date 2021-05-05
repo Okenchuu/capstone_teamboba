@@ -22,3 +22,6 @@ Email: zht@uw.edu
 <span style="font-size:17px;">**Michelle Gouw**</span><br> 
 Role: Frontend, Backend Developer<br>
 Email: gouwm@uw.edu
+
+## Handoff Documentation
+<a href='https://github.com/Okenchuu/capstone_teamboba/blob/main/documentation/Handoff.md'>See Here</a>
