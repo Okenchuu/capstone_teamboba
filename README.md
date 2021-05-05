@@ -1,5 +1,5 @@
 # Better Weather
-Welcome to our INFO490 Capstone, Team Boba's working repository! <br/>
+Welcome to our INFO490 & 491 Capstone, Team Boba's working repository! <br/>
 
 ## Project Info
 Today, Seasonal Affective Disorder affects more than 15 million people in the U.S., with women four times more likely to be diagnosed with it than men. At the same time, the current pandemic makes more people live under limited social interaction and reduced sunlight exposure, which are leading factors that could cause/exacerbate SAD. <br/>
