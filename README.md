@@ -20,9 +20,9 @@ There are downsides to this, however, including:
 <li>Lack of debugging facility </li>
 <li>Since the JavaScript code is viewable to the user, others may use it for malicious purposes</li>
 </ul>
-<span style="font-size:17px;">**Backend:**</span><br>
+<strong style="font-size:17px;">Backend:</strong><br>
 <span style="color: red">Need to be filled out(where do you store users' information in Chat Engine)</span><br><br>
-<span style="font-size:17px;">**The code**</span><br>
+<strong style="font-size:17px;">The code</strong><br>
 The code are under the folders <code>/src</code> and <code>/public</code>. The Chat Engine we constructed in our app in using React, and the rest functions are based on JavaScript, including <code>index.js</code>, <code>app.js</code>, <code>travel.js</code>, and <code>music.js</code>. The construction of the webpage under HTML is under <code>/public</code> folder, including <code>index.html</code>, <code>landing.html</code>, <code>aboutus.html</code>, <code>music.html</code>, and <code>travel.html</code>. Images we use in under <code>/public/img</code>, and datasets we have in under <code>/public</code> in two different formats, which are <code>.json</code> and <code>.csv</code>.
 ## Team Members
 <span style="font-size:17px;">**Nina(Xiying) Zhang**</span><br>
