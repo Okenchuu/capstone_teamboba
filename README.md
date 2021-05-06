@@ -24,6 +24,7 @@ There are downsides to this, however, including:
 <span style="color: red">Need to be filled out(where do you store users' information in Chat Engine)</span><br><br>
 <strong style="font-size:17px;">The code</strong><br>
 The code are under the folders <code>/src</code> and <code>/public</code>. The Chat Engine we constructed in our app in using React, and the rest functions are based on JavaScript, including <code>index.js</code>, <code>app.js</code>, <code>travel.js</code>, and <code>music.js</code>. The construction of the webpage under HTML is under <code>/public</code> folder, including <code>index.html</code>, <code>landing.html</code>, <code>aboutus.html</code>, <code>music.html</code>, and <code>travel.html</code>. Images we use in under <code>/public/img</code>, and datasets we have in under <code>/public</code> in two different formats, which are <code>.json</code> and <code>.csv</code>.
+S
 ## Team Members
 <span style="font-size:17px;">**Nina(Xiying) Zhang**</span><br>
 Role: PM, Frontend<br>
