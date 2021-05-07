@@ -87,6 +87,13 @@
     margin-right: -50%;
     transform: translate(-50%, -50%) 
 }
+#pvideo {
+    margin-left: 25%;
+    margin-top:5%;
+    text-align:center;
+    position: absolute;
+    
+}
 
 .musictype{
     color: rgb(26, 46, 59);
