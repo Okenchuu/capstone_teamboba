@@ -25,7 +25,11 @@ There are downsides to this, however, including:
 <li>Since the JavaScript code is viewable to the user, others may use it for malicious purposes</li>
 </ul>
 <strong style="font-size:17px;">Backend:</strong><br>
-<span style="color: red">Need to be filled out(where do you store users' information in Chat Engine)</span><br><br>
+
+<span style="color: red">Better Weather uses <a href='https://chatengine.io/'>Chat Engine</a> to host the chatrooms. Chat Engine's API makes it easy to add chat functionality within an app. Better Weather uses it to store user profiles and to display the chatroom UI. Chat Engine's free tier allows you to create up to 25 user accounts, but any more than that requires purchase of one of the paid tiers. We were able to get by on the free tier.</span><br>
+
+### * Need to add information about Google OAuth and OpenWeatherMap's API *<br><br>
+
 <strong style="font-size:17px;">The code</strong><br>
 The code are under the folders <code>/src</code> and <code>/public</code>. The Chat Engine we constructed in our app in using React, and the rest functions are based on JavaScript, including <code>index.js</code>, <code>app.js</code>, <code>travel.js</code>, and <code>music.js</code>. The construction of the webpage under HTML is under <code>/public</code> folder, including <code>index.html</code>, <code>landing.html</code>, <code>aboutus.html</code>, <code>music.html</code>, and <code>travel.html</code>. Images we use in under <code>/public/img</code>, and datasets we have in under <code>/public</code> in two different formats, which are <code>.json</code> and <code>.csv</code>.
 S
