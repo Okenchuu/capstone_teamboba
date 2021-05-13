@@ -49,7 +49,12 @@ There are downsides to this, however, including:
 <strong style="font-size:17px;">The code</strong><br>
 The code are under the folders <code>/src</code> and <code>/public</code>. The Chat Engine we constructed in our app in using React, and the rest functions are based on JavaScript, including <code>index.js</code>, <code>app.js</code>, <code>travel.js</code>, and <code>music.js</code>. The construction of the webpage under HTML is under <code>/public</code> folder, including <code>index.html</code>, <code>landing.html</code>, <code>aboutus.html</code>, <code>music.html</code>, and <code>travel.html</code>. Images we use in under <code>/public/img</code>, and datasets we have in under <code>/public</code> in two different formats, which are <code>.json</code> and <code>.csv</code>.
 
-### *add section explaining travel functions and city dataset we currently use*
+<strong style="font-size:17px;">Travel Recommendation and City Dataset</strong><br>
+
+The dataset include top 8000 cities in the United States sorted by population of each city in descending order. The travel recommendation feature is created by calculating the distance between user's current location(latitude and longitude) and each city's location(latitude and longitude). It will find all cities within 50 miles. The method we use to calculate the distance is called Haversine formula.
+<br>
+<br>The great circle distance or the orthodromic distance is the shortest distance between two points on a sphere (or the surface of Earth). In order to use this method, we need to have the co-ordinates of point A and point B.The great circle method is chosen over other methods. First, convert the latitude and longitude values from decimal degrees to radians. For this divide the values of longitude and latitude of both the points by 180/pi. The value of pi is 22/7. The value of 180/pi is approximately 57.29577951. If we want to calculate the distance between two places in miles, use the value 3, 963, which is the radius of Earth. If we want to calculate the distance between two places in kilometers, use the value 6, 378.8, which is the radius of Earth.<br><br>
+
 
 ## Team Members
 <span style="font-size:17px;">**Nina(Xiying) Zhang**</span><br>
