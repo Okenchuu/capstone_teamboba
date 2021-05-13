@@ -7,7 +7,7 @@ This designed solution, Better Weather, is a website that merges basic chat and 
 <a href='https://okenchuu.github.io/capstone_teamboba/landing.html'>Link to webpage</a>
 <br>
 
-### Project Research
+## Project Research
 In order to determine the design and features we wanted to include in our webapp, we pored over articles related to seasonal affective disorder, treatments, and what effect the weather has on a person's mood. We also conducted thorough interviews with those who suffer from SAD to get firsthand accounts of what living with SAD is like and also to gauge the effectiveness of possible app features. 
 
 ## Getting Started: Installing
