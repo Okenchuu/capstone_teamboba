@@ -17,3 +17,6 @@ On the closure date, information stored on Chat Engine’s website including use
 ## Converting the Code Repository to a Public Repository
 The code for Better Weather is currently on Okenchuu’s public <a href='https://github.com/Okenchuu/capstone_teamboba'>Github repository</a> and will remain accessible to the public. 
 
+## README
+
+Our <a href='https://github.com/Okenchuu/capstone_teamboba/blob/main/documentation/README.md'>README</a> will contain finalized instructions including project summary, research insights, App Structure and tech stack, and more.

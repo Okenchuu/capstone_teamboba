@@ -8,7 +8,7 @@ This designed solution, Better Weather, is a website that merges basic chat and 
 <br>
 <br>
 
-### Project Research
+## Project Research
 In order to determine the design and features we wanted to include in our webapp, we pored over articles related to seasonal affective disorder, treatments, and what effect the weather has on a person's mood. We also conducted thorough interviews with those who suffer from SAD to get firsthand accounts of what living with SAD is like and also to gauge the effectiveness of possible app features. 
 
 ## Getting Started: Installing
@@ -50,7 +50,6 @@ There are downsides to this, however, including:
 <strong style="font-size:17px;">The code</strong><br>
 The code are under the folders <code>/src</code> and <code>/public</code>. The Chat Engine we constructed in our app in using React, and the rest functions are based on JavaScript, including <code>index.js</code>, <code>app.js</code>, <code>travel.js</code>, and <code>music.js</code>. The construction of the webpage under HTML is under <code>/public</code> folder, including <code>index.html</code>, <code>landing.html</code>, <code>aboutus.html</code>, <code>music.html</code>, and <code>travel.html</code>. Images we use in under <code>/public/img</code>, and datasets we have in under <code>/public</code> in two different formats, which are <code>.json</code> and <code>.csv</code>.
 
-### add section explaining travel functions and city dataset we currently use
 
 ## Team Members
 <span style="font-size:17px;">**Nina(Xiying) Zhang**</span><br>
