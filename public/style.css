@@ -385,10 +385,10 @@
 }
 
 #bottom{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/sunshine.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('img/sunshine.jpg');
     opacity: 0.95;
     
-    height: 40%;
+    height: 29em;
     margin-top:150px;
     padding:5%;
     
@@ -399,10 +399,12 @@
 }
 #bottom p{
     color:rgba(255, 255, 255, 0.85);
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
 
-
+#contact {
+    margin-top:2%;
+}
 
 h2{
     text-align:center;
