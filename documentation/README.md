@@ -41,7 +41,8 @@ There are downsides to this, however, including:
 </ul>
 <strong style="font-size:17px;">Backend:</strong><br>
 
-<span style="color: red">Better Weather uses <a href='https://chatengine.io/'>Chat Engine</a> to host the chatrooms. Chat Engine's API makes it easy to add chat functionality within an app. Better Weather uses it to store user profiles and to display the chatroom UI. Chat Engine's free tier allows you to create up to 25 user accounts, but any more than that requires purchase of one of the paid tiers. We were able to get by on the free tier.</span><br>
+<span style="color: red">Better Weather uses <a href='https://chatengine.io/'>Chat Engine</a> to host the chatrooms. Chat Engine's API makes it easy to add chat functionality within an app. Better Weather uses it to store user profiles and to display the chatroom UI. Chat Engine's free tier allows you to create up to 25 user accounts, but any more than that requires purchase of one of the paid tiers. We were able to get by on the free tier.</span><br><br>
+We also use Open Weather API to fetch data about user’s location. SAD symptoms stem from what the current user’s weather conditions are. Through getting GPS coordinates via the GeoLocation API, we make a GET request to the Openweather API to figure out the weather conditions for the current user. There, we can effectively map out customizations according to that data.
 
 ### * Need to add information about Google OAuth and OpenWeatherMap's API *<br><br>
 
